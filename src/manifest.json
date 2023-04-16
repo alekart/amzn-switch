@@ -11,9 +11,10 @@
     "128": "icons/icon_128.png"
   },
   "action": {
-    "default_title": "Amzn Switch"
+    "default_title": "Amazon Switch",
+    "default_popup": "popup.html"
   },
-  "permissions": [],
+  "permissions": ["activeTab"],
   "content_scripts": [
     {
       "matches": [
