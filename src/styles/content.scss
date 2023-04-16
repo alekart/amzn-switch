@@ -1,0 +1,40 @@
+#nav-logo {
+  position: relative;
+
+  &:hover .amzns-list {
+      display: block !important;
+  }
+}
+
+#navbar.layout2.bold-focus-hover #nav-logo .nav-logo-link {
+  width: auto !important;
+}
+
+.amzns-btn {
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+.amzns-list {
+  top: 100%;
+  right: 0;
+}
+
+.amzns-link {
+  display: flex;
+  padding: 3px 0;
+  text-transform: uppercase;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  .icp-nav-flag {
+    margin: 0 5px 0;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+

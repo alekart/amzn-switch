@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "AmazonSwitch",
+  "version": "1.0.0",
+  "author": "Aleksei Polechin aka alek´",
+  "description": "Quick switch between different countries on Amazon website",
+  "icons": {
+    "16": "icons/icon_16.png",
+    "32": "icons/icon_32.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "action": {
+    "default_title": "Amzn Switch"
+  },
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.amazon.fr/*",
+        "https://*.amazon.de/*",
+        "https://*.amazon.nl/*",
+        "https://*.amazon.com.be/*",
+        "https://*.amazon.es/*",
+        "https://*.amazon.it/*"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content-style.css"
+      ]
+    }
+  ]
+}
