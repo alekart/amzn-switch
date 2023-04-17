@@ -1,6 +1,5 @@
 const config = require('./webpack.config');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   ...config,
@@ -48,12 +47,5 @@ module.exports = {
   },
   optimization: {
     minimize: true,
-    minimizer: [
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          output: {comments: false},
-        },
-      }),
-    ],
   },
 };
