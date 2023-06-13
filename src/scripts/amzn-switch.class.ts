@@ -34,7 +34,7 @@ export class AmznSwitch {
       return `${accum}
       <a class="amzns-link nav-link nav-item" href="${this.localizeUrl(country)}">
         <span class="icp-nav-flag icp-nav-flag-${cntry} icp-nav-flag-lop"></span>
-        <span class="nav-text">${country}</span>
+        <span class="nav-text" translate="no">${country}</span>
       </a>`;
     }, '');
   }
