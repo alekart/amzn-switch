@@ -1,8 +1,9 @@
 #nav-logo {
   position: relative;
+  display: block !important;
 
   &:hover .amzns-list {
-      display: block !important;
+    display: block !important;
   }
 }
 
@@ -28,6 +29,7 @@
   align-items: center;
   text-decoration: none;
   cursor: pointer;
+  white-space: nowrap;
 
   .icp-nav-flag {
     margin: 0 5px 0;
@@ -38,3 +40,28 @@
   }
 }
 
+.amzns-price {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: .8em;
+  color: black;
+}
+
+.amzns-in-page {
+  display: inline-block;
+  scale: .9;
+  margin: 0;
+
+  &:hover {
+    text-decoration: none;
+
+    .icp-nav-flag {
+      scale: 1.2;
+      transition: scale 300ms;
+    }
+  }
+
+  .icp-nav-flag {
+    transition: scale 300ms;
+  }
+}
