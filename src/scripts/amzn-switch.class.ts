@@ -3,12 +3,13 @@ import { Link, Price } from './interfaces';
 
 export class AmznSwitch {
   static countries = [
-    'fr',
     'com.be',
     'de',
     'es',
+    'fr',
     'it',
     'nl',
+    'co.uk',
   ];
 
   current: string;
@@ -32,10 +33,10 @@ export class AmznSwitch {
   }
 
   private getPrices(links: Link[]) {
-    links.forEach((link) => {
+    links.forEach((link, index) => {
       this.getPrice(link.href).subscribe((price) => {
         this.addPriceToMenu(price, link.flag);
-        this.addPriceInPage(price, link);
+        this.addPriceInPage(price, link, index);
       });
     });
   }
@@ -58,10 +59,10 @@ export class AmznSwitch {
   }
 
   private getList(links: Link[]) {
-    return links.reduce((accum, link) => {
+    return links.reduce((accum, link, index) => {
       const elementId = `amzn-switch-${link.country}`;
       return `${accum}
-      <a id="${elementId}" class="amzns-link nav-link nav-item" href="${link.href}">
+      <a id="${elementId}" data-index="${index}" class="amzns-link nav-link nav-item" href="${link.href}">
         <span class="icp-nav-flag icp-nav-flag-${link.flag} icp-nav-flag-lop"></span>
         <span class="nav-text" translate="no">${link.flag}</span>
         <span id="amzns-price-${link.flag}" class="amzns-price"></span>
@@ -74,7 +75,7 @@ export class AmznSwitch {
       if (this.current === country) {
         return accum;
       }
-      const flag = country.replace('com.', '');
+      const flag = country.replace(/com?\./, '');
       const href = this.localizeUrl(country);
       return [...accum, { href: href, flag, country }];
     }, [] as Link[]);
@@ -94,10 +95,10 @@ export class AmznSwitch {
     }
   }
 
-  private addPriceInPage(price: Price, link: Link) {
+  private addPriceInPage(price: Price, link: Link, index: number) {
     const priceHolder = document.querySelector(`.priceToPay`);
     const priceTmpl = `
-      <a id="page-price-${link.flag}" class="amzns-in-page" href="${link.href}">
+      <a id="page-price-${link.flag}" style="order: ${index}" class="amzns-in-page" href="${link.href}">
         <span class="icp-nav-flag icp-nav-flag-${link.flag} icp-nav-flag-lop"></span><!--
           --><span class="a-price-whole">
               ${price.whole}<!--
