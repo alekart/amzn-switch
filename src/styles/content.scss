@@ -47,6 +47,11 @@
   color: black;
 }
 
+.priceToPay {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .amzns-in-page {
   display: inline-block;
   scale: .9;

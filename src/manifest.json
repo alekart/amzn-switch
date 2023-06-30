@@ -27,7 +27,8 @@
         "https://*.amazon.nl/*",
         "https://*.amazon.com.be/*",
         "https://*.amazon.es/*",
-        "https://*.amazon.it/*"
+        "https://*.amazon.it/*",
+        "https://*.amazon.co.uk/*"
       ],
       "run_at": "document_start",
       "js": [
