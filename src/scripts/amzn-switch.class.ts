@@ -1,6 +1,5 @@
 import { from, mergeMap, Observable, of, throwError } from 'rxjs';
 import { Link, Price } from './interfaces';
-import { HTMLElement } from 'node-html-parser';
 
 export class AmznSwitch {
   static countries = [
