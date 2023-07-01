@@ -1,3 +1,5 @@
-# Clean Facebook
+# Amazon Switch
 
-Chrome plugin to clean sponsored and suggested content (remove ads).
+Chrome plugin to quickly visualize prices of the same product page through multiple Amazon countries. 
+
+### [Download on Chrome Store](https://chrome.google.com/webstore/detail/amazonswitch/ajmnpffielghjhcbdgoodobnajefbgpo)
