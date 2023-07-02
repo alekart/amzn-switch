@@ -8,7 +8,7 @@
     "build": "webpack --config webpack-build.config.js && npm run cleanCssJs",
     "prewatch": "npm run cleanDist",
     "prebuild": "npm run cleanDist",
-    "cleanCssJs": "rm dist/popup-style.js dist/content-style.js",
+    "cleanCssJs": "rm dist/*-style.js",
     "cleanDist": "rm -rf dist",
     "bump-next-major": "node ./scripts/bump-version.js major next",
     "bump-next-minor": "node ./scripts/bump-version.js minor next",

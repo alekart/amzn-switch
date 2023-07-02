@@ -64,7 +64,7 @@ export class AmznSwitch {
       return `${accum}
       <a id="${elementId}" data-index="${index}" class="amzns-link nav-link nav-item" href="${link.href}">
         <span class="icp-nav-flag icp-nav-flag-${link.flag} icp-nav-flag-lop"></span>
-        <span class="nav-text" translate="no">${link.flag}</span>
+        <span class="nav-text amzns-country" translate="no">${link.flag}</span>
         <span id="amzns-price-${link.flag}" class="amzns-price"></span>
       </a>`;
     }, '');
@@ -75,7 +75,7 @@ export class AmznSwitch {
       if (this.current === country) {
         return accum;
       }
-      const flag = country.replace(/com?\./, '');
+      const flag: string = country.replace(/com?\./, '');
       const href = this.localizeUrl(country);
       return [...accum, { href: href, flag, country }];
     }, [] as Link[]);
@@ -83,15 +83,18 @@ export class AmznSwitch {
 
   private addPriceToMenu(price: Price, country: string) {
     const priceHolder = this.menu.querySelector(`#amzns-price-${country}`);
-    const { whole, decimals, symbol } = price;
+    const { whole, decimals, symbol, text } = price;
     if (priceHolder) {
       priceHolder.innerHTML = `
-            <span class="a-price-whole">
-              ${whole}<!--
-          --><span class="a-price-decimal">,</span><!--
-          --></span><!--
-          --><span class="a-price-fraction">${decimals}</span><!--
-          --><span class="a-price-symbol">${symbol}</span>`;
+        <span title="${text}">
+          <span class="a-price-whole">
+            ${whole}<!--
+        --><span class="a-price-decimal">,</span><!--
+        --></span><!--
+        --><span class="a-price-fraction">${decimals}</span><!--
+        --><span class="a-price-symbol">${symbol}</span>
+        </span>
+      `;
     }
   }
 
