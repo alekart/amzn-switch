@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Amazon Switch",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Aleksei Polechin aka alek´",
   "description": "Quick switch between different countries on Amazon website",
   "icons": {

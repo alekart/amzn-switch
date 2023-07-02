@@ -1,6 +1,6 @@
 {
   "name": "amzn-switch",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Quick switch between different countries on Amazon website",
   "private": false,
   "scripts": {
