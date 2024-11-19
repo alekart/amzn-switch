@@ -9,6 +9,8 @@
     "moduleResolution": "node",
     "downlevelIteration": true,
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
     "typeRoots": [
       "node_modules/@types"
     ],
