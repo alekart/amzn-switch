@@ -7,6 +7,7 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     content: './src/content.ts',
+    popup: './src/popup.tsx',
     service_worker: './src/service_worker.ts',
     'content-style': './src/styles/content.scss',
   },
@@ -55,7 +56,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.jsx'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
