@@ -6,8 +6,8 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
   entry: {
-    content: './src/scripts/content.ts',
-    service_worker: './src/scripts/service_worker.ts',
+    content: './src/content.ts',
+    service_worker: './src/service_worker.ts',
     'content-style': './src/styles/content.scss',
   },
   plugins: [
@@ -59,6 +59,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   devServer: {
     open: true,
