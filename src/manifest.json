@@ -12,12 +12,14 @@
   },
   "action": {
     "default_title": "Amazon Switch",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "css": "popup-styles.css"
   },
   "background": {
     "service_worker": "service_worker.js"
   },
   "permissions": [
+    "storage"
   ],
   "content_scripts": [
     {

@@ -1,5 +1,5 @@
-export interface Link {
-  href: string;
-  country: string;
-  flag: string;
+import { Country } from './country.interface';
+
+export interface CountryLink extends Country {
+  href?: string;
 }

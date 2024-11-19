@@ -10,6 +10,7 @@ module.exports = {
     popup: './src/popup.tsx',
     service_worker: './src/service_worker.ts',
     'content-style': './src/styles/content.scss',
+    'popup-style': './src/styles/popup.scss',
   },
   plugins: [
     new MiniCssExtractPlugin(),
