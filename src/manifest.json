@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Amazon Switch",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "author": "Aleksei Polechin aka alek´",
   "description": "Amazon switch, allows switching quickly between different countries on Amazon website and compare prices.",
   "icons": {
@@ -11,7 +11,8 @@
     "128": "icons/icon_128.png"
   },
   "action": {
-    "default_title": "Amazon Switch"
+    "default_title": "Amazon Switch",
+    "default_popup": "popup.html"
   },
   "background": {
     "service_worker": "service_worker.js"
